@@ -17,13 +17,21 @@ object BasicScala {
     * input  : Map()
     * output : ""
     */
-  def encodeParamsInUrl(params: Map[String, String]): String = ???
+  def encodeParamsInUrl(params: Map[String, String]): String = {
+  val encoded = for {
+     (name, value) <- params
+  } yield name + "="+ value
+
+  encoded.mkString("?", "&", "")
+}
 
 
   /**
     * Test if a String is an email
     */
-  def isEmail(maybeEmail: String): Boolean = ???
+  def isEmail(maybeEmail: String): Boolean =
+  """(\w+)@([\w\.]+)""".r.unapplySeq(maybeEmail).isDefined
+
 
 
   /**
@@ -37,7 +45,13 @@ object BasicScala {
     * input : (i = 99, n = 38997)
     * output : 1723793299
     */
-  def power(i:Int, n:Int):Int = ???
-
-
+  def power(i:Int, n:Int):Int =  {
+    var r:Int = 0
+    r=i
+    for (j <- 1 to n-1) {
+      r = r * i
+    }
+    return r
+  }
+power(2,3)
 }
