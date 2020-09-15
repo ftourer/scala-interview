@@ -1,12 +1,57 @@
 
 1) Explain REST and RESTful
+REST est un style d'architecture logicielle. RESTful est généralement
+utilisé pour désigner des services Web mettant en œuvre une telle architecture.
 
 2) Explain the architectural style for the creation of a web API (client server communication, formatting language, etc.)
+le client va appeler l'URL racine de l'AP ,le serveur va alors lui retourner comme
+réponse différentes possibilités d'interactions, avec notamment des liens.
+Le client saura alors qu'il existe deux interactions possibles : utiliser la méthode
+GET pour lister des informations et créer une nouvelle ressource (utiliser la méthode POST ).
 
 3) Explain HTTP requests types when used with RESTful web (GET, PUT, POST, etc.)
+GET est utilisé pour obtenir des informations, POST pour créer une nouvelle ressource,
+PUT pour mettre à jour des informations pour une ressource qui existe déjà et DELETE permet
+de supprimer une ressource.
 
 4) Explain the difference between stateless and stateful protocol. Which type of protocol is HTTP ?
+Pour les protocoles stateless, il n'est pas nécessaire que le serveur conserve les
+informations du serveur ou les détails de session. Les protocoles stateful, quant à eux,
+exigent que les serveurs enregistrent les informations d'état et de session.
+En ce qui concerne la dépendance entre le serveur et le client,
+les protocoles stateless n'ont pas de protocole strict.
+Le protocole Stateless est http.
 
 5) Explain the difference between a GET and a POST (like how are sent the parameters)
+Lorsque la méthode GET est utilisée, toutes les données de formulaire sont
+codées dans l’URL et ajoutées à l’URL en tant que paramètres. Avec POST,
+les données de formulaire apparaissent dans le corps du message de la requête HTTP.
 
 6) You can’t work out how to solve a coding problem. What do you do to find the answer?
+Je cherche à comprendre le problème c’est à dire savoir exactement ce qui est demandé,
+pouvoir expliquer le problème à quelqu’un dans mes propres mots,
+ensuite je fais un plan de résolution de mon problème en le divisant  en plusieurs problèmes
+que j’essaie de résoudre. Si ça ne marche toujours pas je fais un déboggage
+ ( je vais étape par étape au travers de ma solution pour essayer de trouver là où je me suis trompée).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
